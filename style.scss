@@ -1,0 +1,110 @@
+body {
+    scroll-behavior: smooth;
+    height: 200vh;
+    .top-bar {
+        position: sticky;
+        top: 0;
+        height: 6rem;
+        background-color: white;
+        img {
+            mix-blend-mode: multiply;
+            height: 100%;
+        }
+        .widget-list {
+            .widget-item {
+                color: unset;
+                text-decoration: none;
+                user-select: none;
+                margin: .5rem;
+                cursor: pointer;
+                text-align: center;
+                .title {
+                    opacity: 0;
+                    transition: opacity .2s ease-out;
+                }
+                i {
+                    transform: translateY(1rem);
+                    transition: transform .2s ease-out;
+                }
+                &:hover {
+                    .title {
+                        opacity: 1;
+                    }
+                    i {
+                        transform: translateY(0rem);
+                    }
+                }
+            }
+        }
+    }
+    .main-screen {
+        height: calc(90vh - 10rem);
+    }
+    .info-screen {
+        height: 90vh;
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            .item {
+                flex: 1 0 33%;
+                text-align: center;
+                margin: 1rem;
+                padding: 1rem;
+                border-radius: 1rem;
+
+                background-color: rgba(0, 0, 0, 0.2);
+                transition: background-color .25s ease-out;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+                .icon {
+                    font-size: 200%;
+                    &>i {
+                        padding: 1rem;
+                        width: 5rem;
+                        height: 5rem;
+                        line-height: 3rem;
+                        border-radius: 5rem;
+                    }
+                    .fps-item {
+                        background-color: #d15a5a;
+                    }
+                    .settings-item {
+                        background-color: #5ad166;
+                    }
+                    .simple-item {
+                        background-color: #5a5cd1;
+                    }
+                    .design-item {
+                        background-color: #5ad1cb;
+                    }
+                    .addons-item {
+                        background-color: #c15ad1;
+                    }
+                    .staff-item {
+                        background-color: #d1c95a;
+                    }
+                }
+                .title {
+                    font-weight: 500;
+                    font-size: 150%;
+                }
+            }
+        }
+    }
+    .download-screen {
+        height: 90vh;
+        #changelog {
+            margin-top: 40vh;
+        }
+    }
+}
+.btnb {
+    margin: .5rem;
+    cursor: pointer;
+    color: unset;
+    text-decoration: none;
+    &:hover {
+        color: unset;
+    }
+}
