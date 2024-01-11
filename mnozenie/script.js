@@ -44,7 +44,7 @@ function roll() {
     res = num1 * num2;
 
     input.value = "";
-    equation.innerHTML = num1+" x "+num2+" =";
+    equation.innerHTML = num1+"x"+num2+"=";
     begin = Date.now();
     update();
 }
@@ -61,6 +61,6 @@ function update() {
 function pop(rate) {
     popup.setAttribute("rating", (rate?1:0)+"");
     popup.querySelector(".title").innerHTML = rate?"Dobrze!":"Źle!";
-    popup.querySelector(".description").innerHTML = rate?"Oby tak dalej!":"Niestety nie, "+equation.innerHTML+" "+res+"<br>Napisałaś "+input.value;
+    popup.querySelector(".description").innerHTML = rate?"Oby tak dalej!":"Niestety nie, "+equation.innerHTML+res+"<br>Napisałaś "+input.value;
     popup.setAttribute("show", true);
 }
